@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="myApp">
+    <!-- Liste des offres (public) -->
+    <h1>Liste des offres</h1>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Missions</th>
+                <th>Avantages</th>
+                <th>Date de publication</th>
+                <th>Statut</th>
+            </tr>
+        </thead>
+    
+        <tr ng-repeat="offre in offres">
+            <td>{{ offre.titre_offre }}</td>
+            <td>{{ offre.missions }}</td>
+            <td ng-repeat="avantage in avantages">{{ avantage.libelle_avantage }}</td>
+            <td>{{ offre.date_de_publication }}</td>
+            <td>{{ offre.statut_offre }}</td>       
+        </tr>
+        
+    </table>
+
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="myApp">
+    
+    <h1>{{ offre.titre }}</h1>
+
+    <table>
+
+        <thead>
+            <tr>
+                <!-- Les champs pourront changer -->
+                <th>Id_offre</th>
+                <th>Id_rh</th>
+                <th>Titre</th>
+                <th>Missions</th>
+                <th>Prerequis</th>
+                <th>Avantages</th>
+                <th>Date de publication</th>
+                <th>Statut</th>
+            </tr>
+        </thead>
+    
+        <tr>
+            <td>{{ offre.id_offre }}</td>
+            <td>{{ offre.id_rh }}</td>
+            <td>{{ offre.titre_offre }}</td>
+            <td>{{ offre.missions }}</td>
+            <td>{{ prerequis.type }}</td>
+            <td>{{ prerequis.libelle_prerequis }}</td>
+            <td ng-repeat="avantage in avantages">{{ avantage.libelle_avantage }}</td>
+            <td>{{ offre.date_de_publication }}</td>
+            <td>{{ offre.statut_offre }}</td>
+            
+        </tr>
+        
+    </table>
+
+</html>

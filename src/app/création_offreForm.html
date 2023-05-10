@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="myApp">
+        <!-- Complet -->
+        <h1>Créer une nouvelle offre</h1>
+
+        <form method="post">
+                <!-- Tables 'offre' -->
+                <input placeholder="Titre" type="text" name="titre_offre" placeholder = "Titre" required><br>
+
+                <textarea placeholder="Missions" type="text" name="missions" required></textarea><br>
+
+                <!-- Tables 'prerequis' -->
+                <input placeholder="Type" type="text" name="type" required><br>
+
+                <label>Prérequis: </label>
+                <select name="libelle_prerequis">
+                        <option value="bac+1">BAC+1</option>
+                        <option value="bac+2">BAC+2</option>
+                        <option value="bac+3">BAC+3</option>
+                        <option value="bac+4">BAC+4</option>
+                        <option value="bac+5">BAC+5</option>
+                </select><br>
+
+                <!-- Tables 'avantages' -->
+                <textarea placeholder="Avantages" type="text" name="libelle_avantage"></textarea><br>
+
+                <!-- date_de_publication à récupérer hors-formulaire -->
+
+                <!-- statut_offre à définir hors-formulaire -->
+        
+                <input type="submit" value="Créer">
+        </form>
+</html>

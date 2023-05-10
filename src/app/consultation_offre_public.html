@@ -1,0 +1,65 @@
+<!doctype html>
+<html ng-app="myApp">
+    <!-- Consultation des offres (public) -->
+    <h1>{{ offre.titre_offre }}</h1>
+
+    <table>
+
+        <thead>
+            <tr>
+                <!-- Les champs pourront changer -->
+                <th>Titre</th>
+                <th>Missions</th>
+                <th>Prerequis</th>
+                <th>Avantages</th>
+                <th>Date de publication</th>
+                <th>Statut</th>
+            </tr>
+        </thead>
+    
+        <tr>
+            <td>{{ offre.titre_offre }}</td>
+            <td>{{ offre.missions }}</td>
+            <td>{{ prerequis.type }}</td>
+            <td>{{ prerequis.libelle_prerequis }}</td>
+            <td ng-repeat="avantage in avantages">{{ avantage.libelle_avantage }}</td>
+            <td>{{ offre.date_de_publication }}</td>
+            <td>{{ offre.statut_offre }}</td>
+        </tr>
+        
+    </table>
+
+
+
+    <h3>Candidature</h3>
+
+    <form method="post">
+
+        <input placeholder="Nom" type="text" name="nom" required>
+
+        <input placeholder="Prénom" type="text" name="prenom" required>
+
+        <input placeholder="Email" type="email" name="mail" required>
+
+        <input placeholder="Mot de passe" type="password" name="password" required>
+        <input placeholder="Confirmation" type="password" name="password_confirm" required>
+
+        <input placeholder="Situation" type="text" name="situation" required>
+
+        <input placeholder="Date de naissance" type="date" name="date_de_naissance" required>
+
+        <input placeholder="Téléphone" type="tel" name="num" required>
+
+        <input placeholder="Lien LinkedIn" type="url" name="linkedin_link" required>
+
+        <label for="cv">CV</label>
+        <input type="file" id="cv" name="cv" required>
+
+        <label for="lettre_de_motivation">Lettre de motivation</label>
+        <input type="file" id="lettre_de_motivation" name="lettre_de_motivation" required>
+
+        <input type="submit" value="Envoyer la candidature">
+    </form>
+
+
+</html>
